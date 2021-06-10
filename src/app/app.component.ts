@@ -10,7 +10,7 @@ export class AppComponent {
   // Controlamos las fechas minimas y maximas para pedir una cira
   maxAppointmentDate = new Date();
   minAppointmentDate = new Date();
-  disabledDates: Array<Date>;
+  invalidDates: Array<Date>;
 
   /*------------------- Eventos -----------------------*/
   ngOnInit() {
@@ -18,5 +18,10 @@ export class AppComponent {
     this.maxAppointmentDate.setFullYear(
       this.maxAppointmentDate.getFullYear() + 1
     );
+
+    let today = new Date();
+    let invalidDate = new Date();
+    invalidDate.setDate(today.getDate() - 1);
+    this.invalidDates = [today, invalidDate];
   }
 }

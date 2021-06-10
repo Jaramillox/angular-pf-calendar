@@ -1,5 +1,5 @@
 <div class="form-group col-md-5">
   <label for="dateAppointment">Fecha <span class="asterisco">*</span></label>
   <p-calendar name="dateAppointment" id="dateAppointment" type="date" class="form-control" [(ngModel)]="selectedDate"
-    [disabledDates]="disabledDates" [minDate]="minAppointmentDate" [maxDate]="maxAppointmentDate"></p-calendar>
+    [disabledDates]="invalidDates" [minDate]="minAppointmentDate" [maxDate]="maxAppointmentDate"></p-calendar>
 </div>
